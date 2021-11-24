@@ -12,14 +12,20 @@ class HTTP {
           
     }
 
-    edit(endpoint, id) {
+    edit(endpoint, id, newUserData) {
         return fetch(HTTP.#API + endpoint + id, {
             method: 'PUT',
-            body: JSON.stringify({
-            name: 'John',
-            username: 'Rambo3',
-            email: 'mail@email.com',
-        }),
+            body: JSON.stringify(newUserData),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+    }
+
+    create(endpoint, userData) {
+        return fetch(HTTP.#API + endpoint, {
+            method: 'POST',
+            body: JSON.stringify(userData),
             headers: {
               'Content-type': 'application/json; charset=UTF-8',
             },
