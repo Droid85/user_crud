@@ -12,9 +12,19 @@
 </head>
 <body>
     <div id="container" class="wrapper">
-        <div id="users" class="users-container">
-            <button id="create-btn" class="add-btn">Create user</button>
+        <div id="users" class="users-container"></div>
+        <div id="pop-up-bg" class="pop-up-background">
+            <div id="pop-up" class="pop-up-window">
+                <div id="form" class="pop-up-form">
+                    <input type="text" class="form-input" placeholder="name">
+                </div>
+                <div class="btn-block">
+                    <button class="pop-up-btn agree-btn">Ok</button>
+                    <button id="cancel-btn" class="pop-up-btn discard-btn">Cancel</button>
+                </div>
+            </div>
         </div>
+        <button id="create-btn" class="add-btn">Create user</button>
     </div>
     <script src="script.js" defer></script>
 </body>
